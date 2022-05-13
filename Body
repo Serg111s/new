@@ -1,0 +1,23 @@
+print("Индекс массы\n")
+while True:
+	m = float(input(" вес "))
+	rsm = float(input(" рост "))
+	r = rsm/100
+	imt = m/(r*r)
+
+	if 18.5 <= imt <=25:
+		print ("\n Оптимальная масса")
+		plus = (25-imt)*(r*r)
+		minus = (imt-18.5)*(r*r)
+		print (" можно +",'%.3f'%plus)
+		print (" можно -" '%.3f'%minus)
+	if imt < 18.5:
+		print ("\n Недостаточная масса\n")
+		idmin = (18.5-imt)*(r*r)
+		print(" Для оптимальной массы нужно потолстеть на   ",'%.3f'%idmin, " кг")
+	if imt > 25:
+   	 print ("\n Избыточная масса\n")
+   	 idmax = (imt-25)*(r*r)
+   	 print(" Для оптимальной массы нужно похудеть на   ", '%.3f'%idmax, "кг")
+	print(" ______________") 
+	print("\n")
